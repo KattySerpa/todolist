@@ -1,0 +1,22 @@
+
+#container-general{
+    height: 100vh;
+}
+#sidebar{
+ width: 250px;
+ /* height: 100%; */
+}
+
+#principal{
+ width: calc(100% - 250px);
+ height: 100%;   
+}
+
+.container-tareas{
+    width: 65%;
+}
+
+.container-registro{
+    width: 35%;
+}
+

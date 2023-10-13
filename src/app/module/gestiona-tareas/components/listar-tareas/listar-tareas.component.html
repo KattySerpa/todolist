@@ -1,0 +1,32 @@
+
+<div class="container mb-3">
+
+    <div class="d-flex justify-content-end" *ngIf="!tarea_completada">
+        <button type="button" class="btn btn-link agrega-tarea" (click)="informarAgregarTarea(true)">+ Agregar tarea</button>
+    </div>
+
+    <p class="fs-4">{{titulo}}</p>
+    <div 
+    [ngClass]="tarea_completada ? 'class-tarea-completada': ''" 
+    *ngFor="let tarea of data"
+    class="d-flex border tarea-box">
+        <div class="d-flex align-items-center" id="left-side">
+            <div class="me-2">
+                <input type="checkbox" [checked]="tarea_completada" (change)="checkedTarea($event,tarea.id)">
+            </div>
+            <div class="d-flex">
+                <p id="nombre-tarea">{{tarea.titulo}}</p>
+            </div>
+        </div>
+
+        <div class="d-flex justify-content-end align-items-center" id="right-side" *ngIf="!tarea_completada">
+            <div class="me-3">
+                <button type="button" class="btn btn-warning btn-sm" (click)="formEditarTarea(tarea)">Edit</button>
+            </div>
+            <div>
+                <button type="button" class="btn btn-danger btn-sm" (click)="deleteTarea(tarea.id)">Delete</button>
+            </div>
+        </div>
+    </div>
+</div>
+

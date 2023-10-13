@@ -1,0 +1,38 @@
+
+.tarea-box{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#left-side{
+    width: 70%;
+    height: 40px; 
+}
+#right-side{
+    width: 30%;
+    height: 40px; 
+}
+
+#nombre-tarea{
+    /* text-align: center; */
+    margin: 0;
+    /* line-height: 35.2px; */
+}
+.btn{
+    width: 70px;
+}
+.class-tarea-completada{
+    background-color: rgba(56, 51, 51, 0.331);
+    text-decoration: line-through;
+    font-style: italic;
+}
+
+.agrega-tarea{
+    text-align: end;
+    width: 150px;
+    text-decoration: none;
+}
+
+input[type=checkbox]{
+    transform: scale(1.5);
+}

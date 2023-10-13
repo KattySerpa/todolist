@@ -1,0 +1,32 @@
+<div class="container">
+    <h4>Registro</h4>
+
+    <form (submit)= "guardar()">
+        <label class="mb-2" for="">Título de la tarea: </label>
+        <input class="form-control mb-3" type="text" placeholder="Ingresa tarea" name="titulo" [(ngModel)]= "tareaFormulario.titulo">
+        
+        <label class="mb-2" for="">Proyecto:</label>
+        <select class="form-select form-select-sm mb-3" aria-label=".form-select-sm example" name="proyecto_name" [(ngModel)]="tareaFormulario.proyecto_name">
+            <option [selected] = "tareaFormulario.proyecto_name == 'inbax'">inbax</option>
+            <option [selected] = "tareaFormulario.proyecto_name == 'Proyecto 1'">Proyecto 1</option>
+            <option [selected] = "tareaFormulario.proyecto_name == 'Proyecto 2'">Proyecto 2</option>
+            <option [selected] = "tareaFormulario.proyecto_name == 'Proyecto 3'">Proyecto 3</option>
+        </select>
+
+        <label class="mb-2" for="">Prioridad:</label>
+        <select class="form-select form-select-sm mb-3" aria-label=".form-select-sm example" name="prioridad" [(ngModel)]="tareaFormulario.prioridad">
+            <!-- <option selected>{{tareaFormulario.prioridad}}</option> -->
+            <option [selected] = "tareaFormulario.prioridad == 1">1</option>
+            <option [selected] = "tareaFormulario.prioridad == 2">2</option>
+            <option [selected] = "tareaFormulario.prioridad == 3">3</option>
+        </select>
+
+        <label class="mb-2" for="">Fecha:</label>
+        <input class="form-control mb-3" type="date" placeholder="Ingresa tarea" name="fecha" (value)="tareaFormulario.fecha" [(ngModel)]="tareaFormulario.fecha">
+
+        <button type="submit" class="btn btn-success me-3">Guardar</button>
+        <button type="button" class="btn btn-danger" (click)="cancelarRegistroForm()">Cancelar</button>
+
+    </form>
+
+</div>
